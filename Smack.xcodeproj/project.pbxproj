@@ -15,6 +15,7 @@
 		F953D8072126D1E0000F72C6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F953D8052126D1E0000F72C6 /* SWRevealViewController.m */; };
 		F9871D19212868F000AD3D6A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9871D18212868F000AD3D6A /* ChatViewController.swift */; };
 		F9871D1B2128690400AD3D6A /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9871D1A2128690400AD3D6A /* ChannelViewController.swift */; };
+		F9871D1D2128721B00AD3D6A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9871D1C2128721B00AD3D6A /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F953D8062126D1E0000F72C6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F9871D18212868F000AD3D6A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F9871D1A2128690400AD3D6A /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		F9871D1C2128721B00AD3D6A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		F9871D16212868D500AD3D6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9871D1C2128721B00AD3D6A /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				F953D7F22126CD63000F72C6 /* AppDelegate.swift in Sources */,
 				F9871D19212868F000AD3D6A /* ChatViewController.swift in Sources */,
+				F9871D1D2128721B00AD3D6A /* GradientView.swift in Sources */,
 				F9871D1B2128690400AD3D6A /* ChannelViewController.swift in Sources */,
 				F953D8072126D1E0000F72C6 /* SWRevealViewController.m in Sources */,
 			);
