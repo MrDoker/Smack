@@ -76,7 +76,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xsP-5Z-2Tv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xsP-5Z-2Tv">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xsP-5Z-2Tv" id="8T7-jp-g9X">
@@ -218,7 +218,7 @@ IwMDA2dlbmVyYWw
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-YN-vkG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-YN-vkG" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="67" y="306" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.66274509800000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -229,6 +229,11 @@ IwMDA2dlbmVyYWw
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -280,7 +285,7 @@ IwMDA2dlbmVyYWw
                                         </constraints>
                                         <color key="textColor" red="0.30980392159999998" green="0.36470588240000001" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="nickname"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hf-d4-LjA">
                                         <rect key="frame" x="0.0" y="39" width="280" height="2"/>
@@ -297,7 +302,7 @@ IwMDA2dlbmVyYWw
                                         </constraints>
                                         <color key="textColor" red="0.30980392159999998" green="0.36470588240000001" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-0W-z9I">
                                         <rect key="frame" x="0.0" y="93.999999999999972" width="280" height="2"/>
@@ -314,7 +319,7 @@ IwMDA2dlbmVyYWw
                                         </constraints>
                                         <color key="textColor" red="0.30980392159999998" green="0.36470588240000001" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lR-Gk-afV">
                                         <rect key="frame" x="0.0" y="148.99999999999997" width="280" height="2"/>
@@ -326,7 +331,7 @@ IwMDA2dlbmVyYWw
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klb-iE-cAs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klb-iE-cAs" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="67" y="666" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.66274509800000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -337,6 +342,14 @@ IwMDA2dlbmVyYWw
                                 <state key="normal" title="Create account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="wtC-8X-rxM" eventType="touchUpInside" id="BWj-8y-d4k"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DO-iz-alR">
                                 <rect key="frame" x="122.33333333333333" y="85" width="169.66666666666669" height="27.333333333333329"/>
@@ -363,6 +376,7 @@ IwMDA2dlbmVyYWw
                                 </state>
                                 <connections>
                                     <action selector="createAccountButtonPressed:" destination="ZdI-kK-P5l" eventType="touchUpInside" id="NAZ-EK-imG"/>
+                                    <action selector="pickBGColorPressed:" destination="wtC-8X-rxM" eventType="touchUpInside" id="Q8b-4b-y1s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-bN-cSR">
@@ -375,7 +389,7 @@ IwMDA2dlbmVyYWw
                                     <color key="titleColor" red="0.42352941179999998" green="0.66274509800000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="createAccountButtonPressed:" destination="ZdI-kK-P5l" eventType="touchUpInside" id="YhV-Ji-v6i"/>
+                                    <action selector="pickAvatarPressed:" destination="wtC-8X-rxM" eventType="touchUpInside" id="PGS-bw-HQC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -400,6 +414,10 @@ IwMDA2dlbmVyYWw
                         <viewLayoutGuide key="safeArea" id="nuc-AM-vOB"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="mJM-on-uld" id="tlW-e9-FkK"/>
+                        <outlet property="passwordTextField" destination="9PG-Fb-qu3" id="4uM-Pk-78M"/>
+                        <outlet property="userImageView" destination="5ig-kI-oNt" id="OcS-lm-gQh"/>
+                        <outlet property="userNameTextField" destination="cv9-dK-LNN" id="Rvg-8t-oOu"/>
                         <segue destination="SsF-Sz-LN2" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="axh-7L-k67"/>
                     </connections>
                 </viewController>

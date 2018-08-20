@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		630A5B7E768CAC1F911BEE75 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F09E6027338306FCF440C /* Pods_Smack.framework */; };
+		F916927E212AD72F003C9AEE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916927D212AD72F003C9AEE /* AuthService.swift */; };
+		F9169280212AE705003C9AEE /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916927F212AE705003C9AEE /* RoundedButton.swift */; };
+		F9169282212B0A7E003C9AEE /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9169281212B0A7E003C9AEE /* UserDataService.swift */; };
 		F94D6F3A2128B2F900E6E3AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D6F392128B2F900E6E3AB /* Constants.swift */; };
 		F94D6F3C2128B86C00E6E3AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D6F3B2128B86C00E6E3AB /* LoginViewController.swift */; };
 		F94D6F3E2128C59A00E6E3AB /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D6F3D2128C59A00E6E3AB /* CreateAccountViewController.swift */; };
@@ -25,6 +28,9 @@
 		A70B4F9554163A00E5EB47CF /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		A76720AFFF6D025EDB8FC1EB /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		AE5F09E6027338306FCF440C /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F916927D212AD72F003C9AEE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F916927F212AE705003C9AEE /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		F9169281212B0A7E003C9AEE /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		F94D6F392128B2F900E6E3AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F94D6F3B2128B86C00E6E3AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F94D6F3D2128C59A00E6E3AB /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F916927C212AD714003C9AEE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F916927D212AD72F003C9AEE /* AuthService.swift */,
+				F9169281212B0A7E003C9AEE /* UserDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F94D6F382128B2D800E6E3AB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +106,7 @@
 		F953D7F02126CD63000F72C6 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				F916927C212AD714003C9AEE /* Services */,
 				F94D6F382128B2D800E6E3AB /* Utilities */,
 				F9871D17212868DC00AD3D6A /* Model */,
 				F9871D16212868D500AD3D6A /* View */,
@@ -130,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F9871D1C2128721B00AD3D6A /* GradientView.swift */,
+				F916927F212AE705003C9AEE /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,8 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F94D6F3C2128B86C00E6E3AB /* LoginViewController.swift in Sources */,
+				F9169280212AE705003C9AEE /* RoundedButton.swift in Sources */,
 				F953D7F22126CD63000F72C6 /* AppDelegate.swift in Sources */,
+				F9169282212B0A7E003C9AEE /* UserDataService.swift in Sources */,
 				F9871D19212868F000AD3D6A /* ChatViewController.swift in Sources */,
+				F916927E212AD72F003C9AEE /* AuthService.swift in Sources */,
 				F9871D1D2128721B00AD3D6A /* GradientView.swift in Sources */,
 				F94D6F3E2128C59A00E6E3AB /* CreateAccountViewController.swift in Sources */,
 				F9871D1B2128690400AD3D6A /* ChannelViewController.swift in Sources */,
