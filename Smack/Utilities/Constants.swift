@@ -16,10 +16,17 @@ let urlRegister = "\(baseUrlString)account/register"
 let urlLogin = "\(baseUrlString)account/login"
 let urlAddUser = "\(baseUrlString)user/add"
 
+//Colors
+let purplePlaceholderColor = #colorLiteral(red: 0.3098039216, green: 0.3647058824, blue: 0.7333333333, alpha: 0.6207459332)
+
+//Notification Constants
+let notifUserDataDidChange = Notification.Name("notifUserDataDidChange")
+
 //Segues
 let toLoginSegueName = "toLogin"
 let toCreateAccountSegueName = "toCreateAccount"
 let unwindToChannel = "unwindToChannel"
+let toAvatarPickerSegueName = "toAvatarPicker"
 
 //User Defaults
 let isLoggedInKey = "loggedIn"
