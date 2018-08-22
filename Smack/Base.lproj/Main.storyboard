@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1U-e8-D4N">
                                 <rect key="frame" x="312" y="92" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChanelPressed:" destination="Fwo-9b-cNI" eventType="touchUpInside" id="blz-LV-6p6"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="CEW-fj-Jj9" customClass="CircleImageView" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="20" y="636" width="80" height="80"/>
@@ -76,7 +79,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xsP-5Z-2Tv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="channelCell" id="xsP-5Z-2Tv" customClass="ChannelTableViewCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xsP-5Z-2Tv" id="8T7-jp-g9X">
@@ -100,6 +103,9 @@ IwMDA2dlbmVyYWw
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelNameLabel" destination="TxM-rW-EBG" id="rE3-Cl-qw5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -120,11 +126,13 @@ IwMDA2dlbmVyYWw
                             <constraint firstItem="e5o-i7-ouy" firstAttribute="top" secondItem="Y1U-e8-D4N" secondAttribute="bottom" constant="20" id="gBN-KK-Tne"/>
                             <constraint firstItem="udR-Bj-meR" firstAttribute="top" secondItem="ZFM-Fd-gwQ" secondAttribute="top" constant="28" id="hS1-bE-PWV"/>
                             <constraint firstItem="CEW-fj-Jj9" firstAttribute="top" secondItem="e5o-i7-ouy" secondAttribute="bottom" constant="20" id="jBh-0J-AH5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X1t-dF-1Kn" secondAttribute="trailing" constant="20" symbolic="YES" id="oJF-k6-alw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFM-Fd-gwQ"/>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="X1t-dF-1Kn" id="UCe-aH-rm6"/>
+                        <outlet property="tableView" destination="e5o-i7-ouy" id="f3C-0b-ztD"/>
                         <outlet property="userImage" destination="CEW-fj-Jj9" id="gQ6-tL-IXH"/>
                         <segue destination="ZdI-kK-P5l" kind="show" identifier="toLogin" id="pZG-qD-lxi"/>
                     </connections>

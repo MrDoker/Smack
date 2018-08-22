@@ -29,6 +29,10 @@
 		F98AEF40212D6F31003CB529 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98AEF3E212D6F31003CB529 /* ProfileVC.xib */; };
 		F98AEF43212DA361003CB529 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AEF42212DA361003CB529 /* MessageService.swift */; };
 		F98AEF45212DA508003CB529 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AEF44212DA508003CB529 /* Channel.swift */; };
+		F98AEF47212DBEA1003CB529 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AEF46212DBEA1003CB529 /* ChannelTableViewCell.swift */; };
+		F98AEF4A212DC384003CB529 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AEF48212DC384003CB529 /* AddChannelVC.swift */; };
+		F98AEF4B212DC384003CB529 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98AEF49212DC384003CB529 /* AddChannelVC.xib */; };
+		F98AEF4D212DCF3A003CB529 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AEF4C212DCF3A003CB529 /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		F98AEF3E212D6F31003CB529 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		F98AEF42212DA361003CB529 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		F98AEF44212DA508003CB529 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		F98AEF46212DBEA1003CB529 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		F98AEF48212DC384003CB529 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		F98AEF49212DC384003CB529 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		F98AEF4C212DCF3A003CB529 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 				F916927D212AD72F003C9AEE /* AuthService.swift */,
 				F9169281212B0A7E003C9AEE /* UserDataService.swift */,
 				F98AEF42212DA361003CB529 /* MessageService.swift */,
+				F98AEF4C212DCF3A003CB529 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 				F94D6F3D2128C59A00E6E3AB /* CreateAccountViewController.swift */,
 				F955D4A9212C06C9005B3EC6 /* AvatarPickerVC.swift */,
 				F98AEF3D212D6F31003CB529 /* ProfileVC.swift */,
+				F98AEF48212DC384003CB529 /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +177,7 @@
 				F916927F212AE705003C9AEE /* RoundedButton.swift */,
 				F955D4AB212C1813005B3EC6 /* AvatarCollectionViewCell.swift */,
 				F955D4AD212C3871005B3EC6 /* CircleImageView.swift */,
+				F98AEF46212DBEA1003CB529 /* ChannelTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F98AEF3E212D6F31003CB529 /* ProfileVC.xib */,
+				F98AEF49212DC384003CB529 /* AddChannelVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98AEF4B212DC384003CB529 /* AddChannelVC.xib in Resources */,
 				F98AEF40212D6F31003CB529 /* ProfileVC.xib in Resources */,
 				F953D7FC2126CD65000F72C6 /* LaunchScreen.storyboard in Resources */,
 				F953D7F92126CD65000F72C6 /* Assets.xcassets in Resources */,
@@ -316,11 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98AEF4D212DCF3A003CB529 /* SocketService.swift in Sources */,
 				F98AEF3F212D6F31003CB529 /* ProfileVC.swift in Sources */,
 				F94D6F3C2128B86C00E6E3AB /* LoginViewController.swift in Sources */,
 				F955D4AA212C06C9005B3EC6 /* AvatarPickerVC.swift in Sources */,
 				F955D4AE212C3871005B3EC6 /* CircleImageView.swift in Sources */,
 				F98AEF45212DA508003CB529 /* Channel.swift in Sources */,
+				F98AEF47212DBEA1003CB529 /* ChannelTableViewCell.swift in Sources */,
 				F9169280212AE705003C9AEE /* RoundedButton.swift in Sources */,
 				F98AEF43212DA361003CB529 /* MessageService.swift in Sources */,
 				F953D7F22126CD63000F72C6 /* AppDelegate.swift in Sources */,
@@ -328,6 +343,7 @@
 				F9169282212B0A7E003C9AEE /* UserDataService.swift in Sources */,
 				F9871D19212868F000AD3D6A /* ChatViewController.swift in Sources */,
 				F916927E212AD72F003C9AEE /* AuthService.swift in Sources */,
+				F98AEF4A212DC384003CB529 /* AddChannelVC.swift in Sources */,
 				F9871D1D2128721B00AD3D6A /* GradientView.swift in Sources */,
 				F94D6F3E2128C59A00E6E3AB /* CreateAccountViewController.swift in Sources */,
 				F9871D1B2128690400AD3D6A /* ChannelViewController.swift in Sources */,

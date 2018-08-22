@@ -16,6 +16,7 @@ let urlRegister = "\(baseUrlString)account/register"
 let urlLogin = "\(baseUrlString)account/login"
 let urlAddUser = "\(baseUrlString)user/add"
 let urlFindUserByEmail = "\(baseUrlString)user/byEmail/"
+let urlGetChannels = "\(baseUrlString)channel/"
 
 //Colors
 let purplePlaceholderColor = #colorLiteral(red: 0.3098039216, green: 0.3647058824, blue: 0.7333333333, alpha: 0.6207459332)

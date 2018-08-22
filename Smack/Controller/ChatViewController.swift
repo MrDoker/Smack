@@ -21,6 +21,9 @@ class ChatViewController: UIViewController {
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail { (success) in
                 NotificationCenter.default.post(name: notifUserDataDidChange, object: nil)
+                MessageService.instance.findAllChannels(completion: { (success) in
+                    
+                })
             }
         }
     }
