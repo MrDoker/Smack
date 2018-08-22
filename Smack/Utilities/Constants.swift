@@ -15,6 +15,7 @@ let baseUrlString = "https://smackchatdok.herokuapp.com/v1/"
 let urlRegister = "\(baseUrlString)account/register"
 let urlLogin = "\(baseUrlString)account/login"
 let urlAddUser = "\(baseUrlString)user/add"
+let urlFindUserByEmail = "\(baseUrlString)user/byEmail/"
 
 //Colors
 let purplePlaceholderColor = #colorLiteral(red: 0.3098039216, green: 0.3647058824, blue: 0.7333333333, alpha: 0.6207459332)
@@ -35,5 +36,10 @@ let userEmailKey = "userEmail"
 
 //Headers
 let header = [
+    "Content-Type": "application/json; charset=utf-8"
+]
+
+let bearerHeader = [
+    "Authorization":"Bearer \(AuthService.instance.authToken)",
     "Content-Type": "application/json; charset=utf-8"
 ]
