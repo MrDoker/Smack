@@ -46,6 +46,32 @@ class SocketService: NSObject {
         }
     }
     
+    func addMessage(messageBody: String, userID: String, channelID: String, completion: @escaping CompletionHandler) {
+        let user = UserDataService.instance
+        socketManager.defaultSocket.emit("newMessage", messageBody, userID, channelID, user.name, user.avatarName, user.avatarColor)
+        completion(true)
+    }
+    
+    func getChatMessage(completion: @escaping CompletionHandler) {
+        socketManager.defaultSocket.on("messageCreated") { (dataArray, ack) in
+            guard let msgBody = dataArray[0] as? String else {return}
+            guard let channelID = dataArray[2] as? String else {return}
+            guard let userName = dataArray[3] as? String else {return}
+            guard let userAvatar = dataArray[4] as? String else {return}
+            guard let userAvatarColor = dataArray[5] as? String else {return}
+            guard let id = dataArray[6] as? String else {return}
+            guard let timeStamp = dataArray[7] as? String else {return}
+            
+            if channelID == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn{
+                let newMessage = Message(message: msgBody, userName: userName, channelID: channelID, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
+                MessageService.instance.messagesArray.append(newMessage)
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+    
 }
 
 

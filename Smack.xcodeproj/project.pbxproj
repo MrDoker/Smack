@@ -11,6 +11,9 @@
 		F916927E212AD72F003C9AEE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916927D212AD72F003C9AEE /* AuthService.swift */; };
 		F9169280212AE705003C9AEE /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916927F212AE705003C9AEE /* RoundedButton.swift */; };
 		F9169282212B0A7E003C9AEE /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9169281212B0A7E003C9AEE /* UserDataService.swift */; };
+		F94839C4213033C600F6B784 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94839C3213033C600F6B784 /* Message.swift */; };
+		F94839C6213044D500F6B784 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94839C5213044D500F6B784 /* KeyboardBoundView.swift */; };
+		F94839C8213051BB00F6B784 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94839C7213051BB00F6B784 /* MessageTableViewCell.swift */; };
 		F94D6F3A2128B2F900E6E3AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D6F392128B2F900E6E3AB /* Constants.swift */; };
 		F94D6F3C2128B86C00E6E3AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D6F3B2128B86C00E6E3AB /* LoginViewController.swift */; };
 		F94D6F3E2128C59A00E6E3AB /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D6F3D2128C59A00E6E3AB /* CreateAccountViewController.swift */; };
@@ -42,6 +45,9 @@
 		F916927D212AD72F003C9AEE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F916927F212AE705003C9AEE /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		F9169281212B0A7E003C9AEE /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		F94839C3213033C600F6B784 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F94839C5213044D500F6B784 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		F94839C7213051BB00F6B784 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		F94D6F392128B2F900E6E3AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F94D6F3B2128B86C00E6E3AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F94D6F3D2128C59A00E6E3AB /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +184,8 @@
 				F955D4AB212C1813005B3EC6 /* AvatarCollectionViewCell.swift */,
 				F955D4AD212C3871005B3EC6 /* CircleImageView.swift */,
 				F98AEF46212DBEA1003CB529 /* ChannelTableViewCell.swift */,
+				F94839C5213044D500F6B784 /* KeyboardBoundView.swift */,
+				F94839C7213051BB00F6B784 /* MessageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F98AEF44212DA508003CB529 /* Channel.swift */,
+				F94839C3213033C600F6B784 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,12 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94839C6213044D500F6B784 /* KeyboardBoundView.swift in Sources */,
 				F98AEF4D212DCF3A003CB529 /* SocketService.swift in Sources */,
 				F98AEF3F212D6F31003CB529 /* ProfileVC.swift in Sources */,
 				F94D6F3C2128B86C00E6E3AB /* LoginViewController.swift in Sources */,
 				F955D4AA212C06C9005B3EC6 /* AvatarPickerVC.swift in Sources */,
 				F955D4AE212C3871005B3EC6 /* CircleImageView.swift in Sources */,
 				F98AEF45212DA508003CB529 /* Channel.swift in Sources */,
+				F94839C4213033C600F6B784 /* Message.swift in Sources */,
 				F98AEF47212DBEA1003CB529 /* ChannelTableViewCell.swift in Sources */,
 				F9169280212AE705003C9AEE /* RoundedButton.swift in Sources */,
 				F98AEF43212DA361003CB529 /* MessageService.swift in Sources */,
@@ -346,6 +357,7 @@
 				F98AEF4A212DC384003CB529 /* AddChannelVC.swift in Sources */,
 				F9871D1D2128721B00AD3D6A /* GradientView.swift in Sources */,
 				F94D6F3E2128C59A00E6E3AB /* CreateAccountViewController.swift in Sources */,
+				F94839C8213051BB00F6B784 /* MessageTableViewCell.swift in Sources */,
 				F9871D1B2128690400AD3D6A /* ChannelViewController.swift in Sources */,
 				F953D8072126D1E0000F72C6 /* SWRevealViewController.m in Sources */,
 				F94D6F3A2128B2F900E6E3AB /* Constants.swift in Sources */,

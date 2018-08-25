@@ -17,12 +17,15 @@ let urlLogin = "\(baseUrlString)account/login"
 let urlAddUser = "\(baseUrlString)user/add"
 let urlFindUserByEmail = "\(baseUrlString)user/byEmail/"
 let urlGetChannels = "\(baseUrlString)channel/"
+let urlGetMessages = "\(baseUrlString)message/byChannel/"
 
 //Colors
 let purplePlaceholderColor = #colorLiteral(red: 0.3098039216, green: 0.3647058824, blue: 0.7333333333, alpha: 0.6207459332)
 
 //Notification Constants
 let notifUserDataDidChange = Notification.Name("notifUserDataDidChange")
+let notifChannelsLoaded = Notification.Name("notifChannelsLoaded")
+let notifChannelSelected = Notification.Name("notifChannelSelected")
 
 //Segues
 let toLoginSegueName = "toLogin"
