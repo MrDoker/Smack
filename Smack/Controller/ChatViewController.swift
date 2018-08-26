@@ -15,6 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var typingUserLabel: UILabel!
     
     var isTyping = false
     
@@ -39,13 +40,42 @@ class ChatViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: notifUserDataDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(channelSelected(_:)), name: notifChannelSelected, object: nil)
         
-        SocketService.instance.getChatMessage { (success) in
-            if success {
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelID == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messagesArray.append(newMessage)
                 self.tableView.reloadData()
                 if MessageService.instance.messagesArray.count > 0 {
                     let indexPath = IndexPath(row: MessageService.instance.messagesArray.count - 1, section: 0)
                     self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
                 }
+            }
+        }
+        
+        SocketService.instance.getTypingUsers { (typingUsers) in
+            guard let channelID = MessageService.instance.selectedChannel?.id else {return}
+            var names = ""
+            var numberOfTypers = 0
+            
+            for (typingUser, channel) in typingUsers {
+                if typingUser != UserDataService.instance.name && channel == channelID {
+                    if names == "" {
+                        names = typingUser
+                    } else {
+                        names = "\(names), \(typingUser)"
+                    }
+                    numberOfTypers += 1
+                }
+            }
+            
+            if numberOfTypers > 0 && AuthService.instance.isLoggedIn {
+                var verb = "is"
+                if numberOfTypers > 1 {
+                    verb = "are"
+                }
+                
+                self.typingUserLabel.text = "\(names) \(verb) typing a message"
+            } else {
+                self.typingUserLabel.text = ""
             }
         }
         
@@ -74,17 +104,20 @@ class ChatViewController: UIViewController {
     }
     
     func updateWithChannel() {
-        channelNameLabel.text = MessageService.instance.selectedChannel?.channelTitle
+        channelNameLabel.text = "# \(MessageService.instance.selectedChannel?.channelTitle ?? "")"
         getMessages()
     }
     
     @IBAction func messageTextFieldEditing(_ sender: Any) {
+        guard let channelID = MessageService.instance.selectedChannel?.id else { return }
         if messageTextField.text == "" {
             isTyping = false
             sendButton.isHidden = true
+            SocketService.instance.socketManager.defaultSocket.emit("stopType", UserDataService.instance.name, channelID)
         } else {
             if isTyping == false {
                 sendButton.isHidden = false
+                SocketService.instance.socketManager.defaultSocket.emit("startType", UserDataService.instance.name, channelID)
             }
             isTyping = true
         }
@@ -100,6 +133,7 @@ class ChatViewController: UIViewController {
                 if success {
                     self.messageTextField.text = ""
                     self.messageTextField.resignFirstResponder()
+                    SocketService.instance.socketManager.defaultSocket.emit("stopType", UserDataService.instance.name, channelID)
                 }
             }
         }

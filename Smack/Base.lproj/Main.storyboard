@@ -659,6 +659,12 @@ IwMDA2dlbmVyYWw
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-t8-6qL">
+                                <rect key="frame" x="6" y="690" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -669,8 +675,10 @@ IwMDA2dlbmVyYWw
                             <constraint firstItem="vea-4a-dci" firstAttribute="top" secondItem="zSA-kb-Yy1" secondAttribute="bottom" id="Oy7-rB-DFa"/>
                             <constraint firstItem="zSA-kb-Yy1" firstAttribute="trailing" secondItem="fO9-eq-trb" secondAttribute="trailing" id="REc-Vh-dcw"/>
                             <constraint firstItem="fO9-eq-trb" firstAttribute="trailing" secondItem="vea-4a-dci" secondAttribute="trailing" id="Rt8-un-IX0"/>
+                            <constraint firstItem="7ba-7z-vC9" firstAttribute="top" secondItem="Yeg-t8-6qL" secondAttribute="bottom" constant="6" id="WMl-Zl-m7B"/>
                             <constraint firstItem="zSA-kb-Yy1" firstAttribute="top" secondItem="lSk-7F-wMp" secondAttribute="top" id="WPR-JP-c8h"/>
                             <constraint firstItem="fO9-eq-trb" firstAttribute="trailing" secondItem="UMJ-ny-0xF" secondAttribute="trailing" constant="8" id="WuE-kV-aje"/>
+                            <constraint firstItem="Yeg-t8-6qL" firstAttribute="leading" secondItem="fO9-eq-trb" secondAttribute="leading" constant="6" id="fr4-gZ-yVg"/>
                             <constraint firstItem="zSA-kb-Yy1" firstAttribute="leading" secondItem="fO9-eq-trb" secondAttribute="leading" id="opp-9j-hd7"/>
                             <constraint firstItem="7ba-7z-vC9" firstAttribute="top" secondItem="vea-4a-dci" secondAttribute="bottom" constant="30" id="xJR-pM-LmO"/>
                             <constraint firstItem="7ba-7z-vC9" firstAttribute="trailing" secondItem="fO9-eq-trb" secondAttribute="trailing" id="xf6-fe-GBT"/>
@@ -683,6 +691,7 @@ IwMDA2dlbmVyYWw
                         <outlet property="messageTextField" destination="7ba-7z-vC9" id="uoi-WK-e55"/>
                         <outlet property="sendButton" destination="UMJ-ny-0xF" id="wg2-MA-WGF"/>
                         <outlet property="tableView" destination="vea-4a-dci" id="0AD-2i-Ucp"/>
+                        <outlet property="typingUserLabel" destination="Yeg-t8-6qL" id="Npo-TN-GHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtP-UD-tKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
