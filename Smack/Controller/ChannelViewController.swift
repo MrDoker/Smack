@@ -40,7 +40,7 @@ class ChannelViewController: UIViewController {
         setupUserInfo()
     }
     
-    @IBAction func loginButtonPressed(_ sender: Any) {
+    func loginBtnPressed() {
         if AuthService.instance.isLoggedIn {
             let profile = ProfileVC()
             profile.modalPresentationStyle = .custom
@@ -48,6 +48,13 @@ class ChannelViewController: UIViewController {
         } else {
             performSegue(withIdentifier: toLoginSegueName, sender: nil)
         }
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        loginBtnPressed()
+    }
+    @IBAction func userImagePressed(_ sender: Any) {
+        loginBtnPressed()
     }
     
     @IBAction func addChanelPressed(_ sender: Any) {

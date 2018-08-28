@@ -29,7 +29,11 @@ class ChatViewController: UIViewController {
         
         sendButton.isHidden = true
         
-        view.bindToKeyboard()
+        ///
+        ////
+        //view.bindToKeyboard()
+        messageTextField.delegate = self
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
         
@@ -79,15 +83,50 @@ class ChatViewController: UIViewController {
             }
         }
         
+        loginUser()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    func loginUser(){
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail { (success) in
-                NotificationCenter.default.post(name: notifUserDataDidChange, object: nil)
+                //
+                if success {
+                    NotificationCenter.default.post(name: notifUserDataDidChange, object: nil)
+                } else {
+                    let alert = UIAlertController(title: "Error", message: "Something was wrong. Check you inthernet connection or try to use VPN", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (aletr) in
+                        AuthService.instance.isLoggedIn = false
+                        NotificationCenter.default.post(name: notifUserDataDidChange, object: nil)
+                    }))
+                    alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: { (aletr) in
+                        self.loginUser()
+                    }))
+                }
             }
         }
     }
     
     @objc func handleTap() {
         messageTextField.endEditing(true)
+    }
+    
+    @objc func keyboardWillChange(_ notification: NSNotification) {
+        if messageTextField.isFirstResponder {
+            let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+            let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
+            let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+            let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            let deltaY = targetFrame.origin.y - curFrame.origin.y
+            
+            UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: curve), animations: {
+                self.view.frame.origin.y += deltaY
+                
+            },completion: {(true) in
+                self.view.layoutIfNeeded()
+            })
+        }
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
@@ -179,6 +218,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+}
+
+extension ChatViewController: UITextFieldDelegate {
+
+    
 }
 
 

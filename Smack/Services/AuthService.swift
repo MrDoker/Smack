@@ -139,6 +139,24 @@ class AuthService {
         }
     }
     
+    func changeUserName(userID: String, newUserName: String, completion: @escaping CompletionHandler) {
+        let body: [String: Any] = [
+            "name": newUserName,
+            "email": UserDataService.instance.email,
+            "avatarName": UserDataService.instance.avatarName,
+            "avatarColor": UserDataService.instance.avatarColor
+        ]
+        
+        Alamofire.request("\(urlChangeUserName)\(userID)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: bearerHeader).responseJSON { (response) in
+            if response.result.error == nil {
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
 }
 
 

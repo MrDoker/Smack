@@ -109,16 +109,25 @@ IwMDA2dlbmVyYWw
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvF-iV-3fm">
+                                <rect key="frame" x="20" y="636" width="80" height="80"/>
+                                <connections>
+                                    <action selector="userImagePressed:" destination="Fwo-9b-cNI" eventType="touchUpInside" id="g25-hi-DWe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dvF-iV-3fm" firstAttribute="height" secondItem="CEW-fj-Jj9" secondAttribute="height" id="5kr-ay-rdb"/>
                             <constraint firstItem="e5o-i7-ouy" firstAttribute="trailing" secondItem="ZFM-Fd-gwQ" secondAttribute="trailing" id="6c9-wL-0QY"/>
                             <constraint firstItem="X1t-dF-1Kn" firstAttribute="centerY" secondItem="CEW-fj-Jj9" secondAttribute="centerY" id="90e-8S-IG6"/>
+                            <constraint firstItem="dvF-iV-3fm" firstAttribute="leading" secondItem="ZFM-Fd-gwQ" secondAttribute="leading" constant="20" id="Cdp-Qh-te7"/>
                             <constraint firstItem="ZFM-Fd-gwQ" firstAttribute="bottom" secondItem="CEW-fj-Jj9" secondAttribute="bottom" constant="20" id="DZZ-BW-GRz"/>
                             <constraint firstItem="e5o-i7-ouy" firstAttribute="leading" secondItem="ZFM-Fd-gwQ" secondAttribute="leading" id="Frf-ZQ-wMe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y1U-e8-D4N" secondAttribute="trailing" constant="60" id="QAd-J2-d1v"/>
                             <constraint firstItem="CEW-fj-Jj9" firstAttribute="leading" secondItem="ZFM-Fd-gwQ" secondAttribute="leading" constant="20" id="QDK-K1-212"/>
                             <constraint firstItem="Y1U-e8-D4N" firstAttribute="centerY" secondItem="WEa-My-6GR" secondAttribute="centerY" id="S2P-gv-gdj"/>
+                            <constraint firstItem="ZFM-Fd-gwQ" firstAttribute="bottom" secondItem="dvF-iV-3fm" secondAttribute="bottom" constant="20" id="TIG-Xo-fg5"/>
                             <constraint firstItem="WEa-My-6GR" firstAttribute="leading" secondItem="ZFM-Fd-gwQ" secondAttribute="leading" constant="20" id="Ths-2I-NkS"/>
                             <constraint firstItem="X1t-dF-1Kn" firstAttribute="leading" secondItem="CEW-fj-Jj9" secondAttribute="trailing" constant="20" id="Tmx-rW-6Pw"/>
                             <constraint firstItem="WEa-My-6GR" firstAttribute="top" secondItem="udR-Bj-meR" secondAttribute="bottom" constant="20" id="d3G-jQ-R3B"/>
@@ -127,6 +136,7 @@ IwMDA2dlbmVyYWw
                             <constraint firstItem="udR-Bj-meR" firstAttribute="top" secondItem="ZFM-Fd-gwQ" secondAttribute="top" constant="28" id="hS1-bE-PWV"/>
                             <constraint firstItem="CEW-fj-Jj9" firstAttribute="top" secondItem="e5o-i7-ouy" secondAttribute="bottom" constant="20" id="jBh-0J-AH5"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X1t-dF-1Kn" secondAttribute="trailing" constant="20" symbolic="YES" id="oJF-k6-alw"/>
+                            <constraint firstItem="dvF-iV-3fm" firstAttribute="width" secondItem="CEW-fj-Jj9" secondAttribute="width" id="shD-rs-w16"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFM-Fd-gwQ"/>
                     </view>
